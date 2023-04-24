@@ -1,0 +1,25 @@
+{
+    /*Version del lenguaje de la politica*/
+    "Version": "2012-10-17",
+    /*Identificador de politica (opcional) */
+    "Id": "iam-policy-read-001",
+    /*Declaraciones a realizar una o varias*/
+    "Statement": [
+        {
+            /*Identificador de la declaración*/
+            "Sid": "iam-policy-read-statement-001",
+            /*Accion a realizar allow deny*/
+            "Effect": "Allow",
+            /*Cuenta/usuario/rol al que se le aplica la politica*/
+            "Principal": {
+                "AWS":["arn:aws:iam::892506413973:policy/iam-read"]
+            },
+            /*Lista de acciones a realizar basado en el effect*/
+            "Action": [
+                "iam:GetPolicyVersion",
+            ],
+            /*Lista de recursos a que se le aplican las acciones*/
+            "Resource": "*"
+        }
+    ]
+}
